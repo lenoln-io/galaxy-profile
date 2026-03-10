@@ -1,0 +1,117 @@
+# Galaxy Profile README Configuration
+# Copy this file to config.yml and customize it to make it your own!
+#
+# Usage:
+#   cp config.example.yml config.yml
+#   # Edit config.yml with your details
+#   python -m generator.main
+#
+# Demo mode (no API calls, uses this file directly):
+#   python -m generator.main --demo
+
+# Your GitHub username (required)
+username: lenoln-io
+
+# Profile information displayed in the galaxy header
+profile:
+  name: "Lenoln Muniz"
+  tagline: "Backend Developer"
+  company: "Open to work"
+  location: "Minas Gerais, Brazil"
+  bio: |
+    Building software that makes life easier to live.
+    A tech-savvy developer who is resuming their journey in the development field.
+  philosophy: '"The best code is the code that empowers others."'
+
+# Social links displayed at the bottom of the profile
+social:
+  email: "lenoln.muniz.dev@gmail.com"
+  linkedin: "lenoln-io"
+
+# Galaxy arms represent your core focus areas
+# Each arm spirals out from the center with its own color and tech items
+# Available colors: "synapse_cyan", "dendrite_violet", "axon_amber"
+galaxy_arms:
+  - name: "Backend"
+    color: "backend"
+    items:
+      - "Java"
+      - "Node.js"
+      - "PHP"
+  - name: "Databases"
+    color: "databases"
+    items:
+      - "PostgreSQL"
+      - "MySQL"
+      - "PL/SQL"
+      - "H2 Database"
+  - name: "Frameworks"
+    color: "frameworks"
+    items:
+      - "Spring Boot"
+      - "Tailwind CSS"
+      - "Laravel"
+
+# Featured projects shown as constellation stars
+# Each project needs:
+#   repo: "owner/repo-name"   — GitHub repository path
+#   arm: 0-2                  — Which galaxy arm to associate with (index)
+#   description: "..."        — Short description shown on the card
+projects:
+  - repo: "lenoln-io/memorial_market_project_client"
+    arm: 0
+    description: "A project for managing and documenting the purchase history of a supermarket client."
+  - repo: "lenoln-io/teste-iniflex"
+    arm: 0
+    description: "Practical programming test for the company Projedata."
+  - repo: "lenoln-io/todolist"
+    arm: 0
+    description: "Construction of a TODO-List application in Java with essential Spring Boot concepts, development environment setup with Maven, extension installation, and project structure creation."
+  - repo: "lenoln-io/certification"
+    arm: 0
+    description: "Development of a back-end application in Java, Maven, Spring Boot, Rest API, Lombok, integration with PostgreSQL Database, we implemented the JDBC Template, learning SOLID principles, JPA, using entities, cardinalities between tables and DTOs."
+
+# Theme color overrides (optional — defaults to deep space palette)
+# All values must be valid hex color codes (#RRGGBB)
+theme:
+  void: "#080c14"              # Darkest background
+  nebula: "#0f1623"            # Card backgrounds
+  star_dust: "#1a2332"         # Borders, dividers
+  synapse_cyan: "#00d4ff"      # Primary accent (arm color 1)
+  dendrite_violet: "#a78bfa"   # Secondary accent (arm color 2)
+  axon_amber: "#ffb020"        # Tertiary accent (arm color 3)
+  violet_paste: "#5d1c7a"      # Highlight color for labels, badges
+  text_bright: "#f1f5f9"       # Primary text
+  text_dim: "#94a3b8"          # Secondary text
+  text_faint: "#64748b"        # Muted text, labels
+  # arm colors in pastel tones for the telemetry chart
+  blue_accent: "#b3ebf2"       
+  pink_accent: "#ffc5d3"      
+  green_accent: "#10B981"
+  yellow_accent: "#ffee8c"
+  lavender_accent: "#e6e6fa"
+  peach_accent: "#ffdab9"
+  beige_accent: "#f9e4b7"
+  orange_accent: "#ffcc99"
+
+  frontend: "#3B82F6"             # Override arm color for frontend
+  backend: "#77dd77"              # Override arm color for backend
+  databases: "#ff6b6b"            # Override arm color for databases
+  devops: "#fbbf24"              # Override arm color for devops
+  frameworks: "#c084fc"          # Override arm color for frameworks
+
+# Stats configuration — which metrics to show on the telemetry card
+stats:
+  metrics:
+    - "commits"
+    - "stars"
+    - "prs"
+    - "issues"
+    - "repos"
+
+# Language display settings
+languages:
+  exclude:                     # Languages to hide from the telemetry chart
+    - "HTML"
+    - "Makefile"
+  max_display: 8               # Maximum number of languages to show
